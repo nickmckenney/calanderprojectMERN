@@ -4,16 +4,13 @@ class Square extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: "2"
+      addText: ""
     };
   }
 
   render() {
-    return (
-      <div className="square" onClick={() => this.props.onClick()}>
-        <h1>{this.state.text}</h1>
-      </div>
-    );
+    //   let boxes=this.
+    return <div className="square" onClick={() => this.props.onClick()}></div>;
   }
 }
 export default Square;
