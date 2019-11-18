@@ -5,9 +5,11 @@
   height: 100vh;
 }
 .square {
-  width: 14.2%;
+  width: 14%;
   height: 16.7vh;
-  background-color: red;
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
 }
 .container {
   grid-row: 3 / span 1;

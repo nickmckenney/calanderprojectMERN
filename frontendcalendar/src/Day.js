@@ -3,9 +3,9 @@ import "./App.css";
 class Square extends React.Component {
   render() {
     return (
-      <button className="square" onClick={() => this.props.onClick()}>
-        {this.props.value}
-      </button>
+      <div className="square" onClick={() => this.props.onClick()}>
+        <h1>1</h1>
+      </div>
     );
   }
 }
