@@ -1,8 +1,8 @@
 .App {
   text-align: center;
   display: grid;
-  grid-template-columns: 7% 13% 13% 13% 13% 13% 13% 13% 2%;
-  /* grid-template-rows: 7% 3% 13% 13% 13% 13% 13%; */
+  grid-template-columns: 25% 10% 10% 10% 10% 10% 10% 10% 5%;
+  grid-template-rows: 15% 5% 15% 15% 15% 15% 15% 5%;
 }
 .App-header {
   min-height: 100vh;
