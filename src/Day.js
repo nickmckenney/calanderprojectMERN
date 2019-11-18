@@ -10,7 +10,11 @@ class Square extends React.Component {
 
   render() {
     //   let boxes=this.
-    return <div className="square" onClick={() => this.props.onClick()}></div>;
+    return (
+      <div className="square" onClick={() => this.props.onClick()}>
+        {this.props.value}
+      </div>
+    );
   }
 }
 export default Square;

@@ -5,7 +5,8 @@ class Board extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      squares: []
+      squares: [],
+      day: ""
     };
   }
 
@@ -15,12 +16,7 @@ class Board extends React.Component {
   }
 
   renderSquare(i) {
-    return (
-      <Square
-        // value={this.state.squares[i]}
-        onClick={() => this.handleClick(i)}
-      />
-    );
+    return <Square value={i} onClick={() => this.handleClick(i)} />;
   }
 
   render() {
