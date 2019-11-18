@@ -2,11 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 class Aside extends Component {
   render() {
-    return (
-      <div>
-        <h1>q</h1>
-      </div>
-    );
+    return <div className="aside"></div>;
   }
 }
 export default Aside;
