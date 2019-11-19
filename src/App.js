@@ -71,7 +71,7 @@ class App extends Component {
       leapYear = 0;
     }
     let dayOfWeek = ((yearCode + monthCode + this.centuryCode + 1 + leapYear) %7 ) % 7;
-    this.state({ dayOfTheWeek: dayOfWeek });
+    this.setState({ dayOfTheWeek: dayOfWeek });
   }
 
   monthNext = () => {
@@ -100,10 +100,10 @@ class App extends Component {
 
   componentDidMount() {
     this.grabHolidayMonth();
+    this.firstDay();
   }
 
   render() {
-    this.firstDay()
     return (
       <div className="App">
         <Container {...this.state} dayCounter={this.dayCounter} />
