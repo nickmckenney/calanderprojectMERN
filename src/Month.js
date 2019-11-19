@@ -14,7 +14,7 @@ class Month extends React.Component {
           Click Me
         </button>
 
-        <h1>{this.props.months[this.props.index]}</h1>
+        {/* <h1>{this.props.months[this.props.index]}</h1> */}
       </div>
     );
   }

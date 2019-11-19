@@ -14,41 +14,6 @@ class Board extends React.Component {
     return (
       <div className="container">
         <div className="board-row">
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
-          {this.renderSquare()}
         </div>
       </div>
     );

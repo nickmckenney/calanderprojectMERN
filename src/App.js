@@ -3,41 +3,74 @@ import "./App.css";
 import Container from "./Container";
 import Aside from "./Aside";
 import Month from "./Month";
+import { parse } from "date-fns";
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      months: [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
-      ],
       index: 0,
       squares: [],
-      days: 0,
-      month: ""
+      month: 1,
+      year: 2019,
+      isLoading: false,
+      holidayArray: [],
+      birthdayArray: []
     };
+    this.apiURL = "https://calendar-api-deploy.herokuapp.com/";
+    this.months = [
+      null,
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ];
+    this.daysPerMonth = [null, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    this.monthStrings = [null, "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
   }
 
-  daysInMonth = (month, year) => {
-    this.state.days = new Date(year, month, 0).getDate();
-    return new Date(year, month, 0).getDate();
+  grabHolidayMonth = () => {
+    this.setState({ isLoading: true });
+    fetch(
+      this.apiURL +
+        "holiday/date/" +
+        `${this.state.year}-${this.monthStrings[this.state.month]}-01/` +
+        `${this.state.year}-${this.monthStrings[this.state.month]}-${this.daysPerMonth[this.state.month]}`
+    )
+      .then(res => res.json())
+      .then(res => {
+        console.log("Got Holiday Data");
+        this.setState({
+          holidayArray: res,
+          isLoading: false
+        });
+      })
+      .catch(err => {
+        console.log("We've got a problem, sir.", err);
+      });
   };
 
-  dayCounter = () => {
-    var date = new Date();
-    var month = this.state.index + 1;
-    var year = 2019;
-    this.daysInMonth(month, year);
+  monthNext = () => {
+    if (this.state.month === 12) {
+      this.setState({ month: 1 });
+    } else {
+      this.setState({ month: this.state.month + 1 });
+    }
+  };
+
+  monthPrevoius = () => {
+    if (this.state.month === 1) {
+      this.setState({ month: 12 });
+    } else {
+      this.setState({ month: this.state.month - 1 });
+    }
   };
 
   clickHandler = () => {
@@ -47,6 +80,10 @@ class App extends Component {
       });
     }
   };
+
+  componentDidMount() {
+    this.grabHolidayMonth();
+  }
 
   render() {
     return (
