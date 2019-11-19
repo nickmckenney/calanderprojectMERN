@@ -114,7 +114,13 @@ class App extends Component {
       });
     }
   };
-
+  clickHandlerPrev = () => {
+    if (this.state.index > 0) {
+      this.setState({
+        index: this.state.index - 1
+      });
+    }
+  };
   componentDidMount() {
     this.grabHolidayMonth();
     this.firstDay();
@@ -123,11 +129,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Container {...this.state} dayCounter={this.dayCounter} />
+        <Container
+          {...this.state}
+          dayCounter={this.dayCounter}
+          days={this.daysPerMonth}
+        />
         <Month
           {...this.state}
           months={this.months}
           clickHandler={this.clickHandler}
+          clickHandlerPrev={this.clickHandlerPrev}
         />
         <Aside />
       </div>
