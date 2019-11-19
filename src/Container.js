@@ -12,7 +12,9 @@ class Board extends React.Component {
   repeatSeven() {
     for (let i = 0; i < 7; i++) {
       {
-        <h1>{this.renderSquare()}</h1>;
+        {
+          this.renderSquare();
+        }
         console.log(i);
       }
     }
