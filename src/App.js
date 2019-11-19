@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import Day from "./Container";
+import Container from "./Container";
 import Aside from "./Aside";
 import Month from "./Month";
 class App extends Component {
@@ -23,19 +23,21 @@ class App extends Component {
       ],
       index: 0,
       squares: [],
-      days: "",
+      days: 0,
       month: ""
     };
   }
+
   daysInMonth = (month, year) => {
+    this.state.days = new Date(year, month, 0).getDate();
     return new Date(year, month, 0).getDate();
   };
 
-  GFG_Fun = () => {
+  dayCounter = () => {
     var date = new Date();
     var month = this.state.index + 1;
     var year = 2019;
-    console.log(this.daysInMonth(month, year));
+    this.daysInMonth(month, year);
   };
 
   clickHandler = () => {
@@ -43,14 +45,13 @@ class App extends Component {
       this.setState({
         index: this.state.index + 1
       });
-      console.log(this.GFG_Fun());
     }
   };
 
   render() {
     return (
       <div className="App">
-        <Day {...this.state} GFG_Fun={this.GFG_Fun} />
+        <Container {...this.state} dayCounter={this.dayCounter} />
         <Month {...this.state} clickHandler={this.clickHandler} />
         <Aside />
       </div>

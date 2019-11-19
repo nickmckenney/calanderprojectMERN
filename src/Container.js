@@ -7,26 +7,49 @@ class Board extends React.Component {
   }
 
   renderSquare() {
-    return <Square value={this.props.GFG_Fun()} />;
+    return <Square value={this.props.dayCounter()} />;
   }
-  repeatSeven() {
-    for (let i = 0; i < 7; i++) {
-      {
-        {
-          this.renderSquare();
-        }
-        console.log(i);
-      }
-    }
-  }
+
   render() {
     return (
       <div className="container">
-        <div className="board-row">{this.repeatSeven()}</div>
-        <div className="board-row">{this.renderSquare()}</div>
-        <div className="board-row">{this.renderSquare()}</div>
-        <div className="board-row">{this.renderSquare()}</div>
-        <div className="board-row">{this.renderSquare()}</div>
+        <div className="board-row">
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+          {this.renderSquare()}
+        </div>
       </div>
     );
   }
