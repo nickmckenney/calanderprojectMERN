@@ -1,43 +1,20 @@
 import React, { Component } from "react";
 import "./App.css";
+// const dateFns = require("date-fns");
 
 class Month extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      months: [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
-      ],
-      index: 0
-    };
   }
-  clickHandler() {
-    if (this.state.index < 11) {
-      console.log(this.state.index);
-      this.setState({
-        index: this.state.index + 1
-      });
-    }
-  }
+
   render() {
     return (
       <div className="month">
-        <button className="btn" onClick={() => this.clickHandler()}>
+        <button className="btn" onClick={() => this.props.clickHandler()}>
           Click Me
         </button>
 
-        <h1>{this.state.months[this.state.index]}</h1>
+        <h1>{this.props.months[this.props.index]}</h1>
       </div>
     );
   }
