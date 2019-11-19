@@ -10,13 +10,12 @@ class Month extends React.Component {
   render() {
     return (
       <div className="month">
-        <button className="btn" onClick={() => this.props.clickHandler()}>
-          Click Me
-        </button>
         <button className="" onClick={() => this.props.clickHandlerPrev()}>
-          1111
+          PREV
         </button>
-
+        <button className="btn" onClick={() => this.props.clickHandler()}>
+          NEXT
+        </button>
         <h1>{this.props.months[this.props.index + 1]}</h1>
       </div>
     );

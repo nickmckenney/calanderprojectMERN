@@ -133,6 +133,7 @@ class App extends Component {
           {...this.state}
           dayCounter={this.dayCounter}
           days={this.daysPerMonth}
+          index={this.state.index}
         />
         <Month
           {...this.state}
