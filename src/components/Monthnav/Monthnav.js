@@ -16,7 +16,7 @@ class Monthnav extends Component {
         >
           &#8249;
         </button>
-        <span className="month">{this.props.months[this.props.month]}</span>
+        {/* <span className="month">{this.props.months[this.props.month]}</span> */}
         <button
           onClick={() => this.props.clickHandler()}
           className="arrow next"

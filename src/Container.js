@@ -20,8 +20,8 @@ class Board extends React.Component {
       daysInMonth -= 1;
     }
 
-    for (let yoboi = 0; yoboi < monthdaySkiper; yoboi++) {
-      rows.push(<Square value={"."} key={yoboi + 100} />);
+    for (let count = 0; count < monthdaySkiper; count++) {
+      rows.push(<Square value={"."} key={count + 100} />);
     }
 
     for (var i = 0; i < 42 - monthdaySkiper; i++) {
