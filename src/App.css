@@ -16,7 +16,6 @@
   grid-column: 2;
 }
 .aside {
-  background-color: orange;
   /* width: 10px; */
   grid-row: 2 / span1;
 }

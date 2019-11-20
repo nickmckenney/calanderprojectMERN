@@ -13,7 +13,7 @@ class App extends Component {
       isLoading: false,
       holidayArray: [],
       birthdayArray: [],
-      dayOfTheWeek: 0
+      dayOfTheWeek: 0 //Where the first day starts
     };
     this.apiURL = "https://calendar-api-deploy.herokuapp.com/";
     // [0] is null so that month numbers match. (WDC)
@@ -166,17 +166,26 @@ class App extends Component {
     } else {
       leapYear = 0;
     }
+
     let dayOfWeek =
       ((yearCode + monthCode + this.centuryCode + 1 + leapYear) % 7) % 7;
+
     this.setState({ dayOfTheWeek: dayOfWeek });
+<<<<<<< HEAD
     console.log(dayOfWeek);
+=======
+    console.log("leap " + leapYear);
+    console.log("dow " + dayOfWeek);
+    console.log("dotw " + this.state.dayOfTheWeek);
+    console.log("NEW STATE");
+>>>>>>> 9da0999c0432fa23a7417cc61b0c88660aad5f9f
   };
 
   // Increases state.month by 1. If it's December, it will roll over to January. (WDC)
   // Year in state will also change properly.
   monthNext = () => {
     if (this.state.month === 12) {
-      this.setState({ year: this.state.year + 1})
+      this.setState({ year: this.state.year + 1 });
       this.setState({ month: 1 });
     } else {
       this.setState({ month: this.state.month + 1 });
@@ -193,8 +202,13 @@ class App extends Component {
     } else {
       this.setState({ month: this.state.month - 1 });
     }
+<<<<<<< HEAD
     this.firstDay()
+=======
+    this.firstDay();
+>>>>>>> 9da0999c0432fa23a7417cc61b0c88660aad5f9f
   };
+
   componentDidMount() {
     this.grabHolidayMonth();
     this.grabBirthdayMonth();
