@@ -15,8 +15,10 @@
   grid-row: 3 / span 1;
   grid-column: 2;
 }
+
 .aside {
   /* width: 10px; */
+
   grid-row: 2 / span1;
 }
 .navbar {

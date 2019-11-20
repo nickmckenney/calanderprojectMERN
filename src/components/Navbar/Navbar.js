@@ -13,16 +13,13 @@ class Navbar extends Component {
   constructor(props) {
     super(props);
   }
-
   linkHandler(e) {
     e.preventDefault();
   }
-
   render() {
     return (
       <nav className="navbar navbar-light bg-light">
         <Accordion />
-
         <div className="monthContainer">
           <button
             onClick={() => this.props.clickHandlerPrev()}
@@ -31,8 +28,10 @@ class Navbar extends Component {
             &#8249;
           </button>
           <span className="month">
-            {this.props.months[this.props.month]}
-            {this.props.year}
+            <div className="yearContainer">{this.props.year}</div>
+            <div className="monthContainer">
+              {this.props.months[this.props.month]}
+            </div>
           </span>
           <button
             onClick={() => this.props.clickHandler()}
@@ -41,7 +40,6 @@ class Navbar extends Component {
             &#8250;
           </button>
         </div>
-
         <form className="form-inline my-2 my-lg-0">
           <input
             className="form-control mr-sm-2"
