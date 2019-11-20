@@ -188,7 +188,7 @@ class App extends Component {
     } else {
       this.setState({ month: this.state.month + 1 });
     }
-    this.setState({ dayOfTheWeek: this.firstDay(this.state.month) });
+    this.setState({ dayOfTheWeek: this.firstDay(this.state.month + 1) });
   };
 
   // Decreases state.month by 1. If it's January, it will roll over to December. (WDC)
@@ -200,7 +200,7 @@ class App extends Component {
     } else {
       this.setState({ month: this.state.month - 1 });
     }
-    this.setState({ dayOfTheWeek: this.firstDay() });
+    this.setState({ dayOfTheWeek: this.firstDay(this.state.month - 1) });
   };
 
   componentDidMount() {
