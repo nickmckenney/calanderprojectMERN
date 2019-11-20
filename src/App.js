@@ -3,6 +3,8 @@ import "./App.css";
 import Container from "./Container";
 import Aside from "./Aside";
 import Month from "./Month";
+import Monthnav from "../src/components/Monthnav/Monthnav";
+// import Monthnav from "./components/Navbar/Navbar";
 import { parse } from "date-fns";
 class App extends Component {
   constructor(props) {
@@ -59,16 +61,48 @@ class App extends Component {
   // matching day. This then goes into state in the fetch request. (WDC)
   parseData(res) {
     // This is the base calendar array for data coming from the API to be slotted into (WDC)
-    let baseArray = [ [null],["01"], ["02"], ["03"], ["04"], ["05"], ["06"], ["07"],
-    ["08"], ["09"], ["10"], ["11"], ["12"], ["13"], ["14"],
-    ["15"], ["16"], ["17"], ["18"], ["19"], ["20"], ["21"],
-    ["22"], ["23"], ["24"], ["25"], ["26"], ["27"], ["28"],
-    ["29"], ["30"], ["31"] ]
+    let baseArray = [
+      [null],
+      ["01"],
+      ["02"],
+      ["03"],
+      ["04"],
+      ["05"],
+      ["06"],
+      ["07"],
+      ["08"],
+      ["09"],
+      ["10"],
+      ["11"],
+      ["12"],
+      ["13"],
+      ["14"],
+      ["15"],
+      ["16"],
+      ["17"],
+      ["18"],
+      ["19"],
+      ["20"],
+      ["21"],
+      ["22"],
+      ["23"],
+      ["24"],
+      ["25"],
+      ["26"],
+      ["27"],
+      ["28"],
+      ["29"],
+      ["30"],
+      ["31"]
+    ];
     let dataArray = res;
-    for(let i = 0; i < baseArray.length; i++) {
-      for(let j = 0; j < dataArray.length; j++) {
-        if(dataArray[j].dateShort === `${this.monthStrings[this.state.month]}-${baseArray[i][0]}`) {
-          baseArray[i].push(dataArray[j])
+    for (let i = 0; i < baseArray.length; i++) {
+      for (let j = 0; j < dataArray.length; j++) {
+        if (
+          dataArray[j].dateShort ===
+          `${this.monthStrings[this.state.month]}-${baseArray[i][0]}`
+        ) {
+          baseArray[i].push(dataArray[j]);
         }
       }
     }
@@ -166,17 +200,24 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Monthnav
+          clickHandler={this.monthNext}
+          clickHandlerPrev={this.monthPrevoius}
+          months={this.months}
+          {...this.state}
+        />
+        <Month
+          {...this.state}
+          clickHandler={this.monthNext}
+          clickHandlerPrev={this.monthPrevoius}
+          months={this.months}
+        />
         <Container
           {...this.state}
           dayCounter={this.dayCounter}
           days={this.daysPerMonth}
         />
-        <Month
-          {...this.state}
-          months={this.months}
-          clickHandler={this.monthNext}
-          clickHandlerPrev={this.monthPrevoius}
-        />
+
         <Aside />
       </div>
     );

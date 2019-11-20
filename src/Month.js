@@ -1,6 +1,6 @@
 import React, { Component } from "react";
+import Navbar from "../src/components/Navbar/Navbar";
 import "./App.css";
-// const dateFns = require("date-fns");
 
 class Month extends React.Component {
   constructor(props) {
@@ -8,16 +8,10 @@ class Month extends React.Component {
   }
 
   render() {
-    console.log(this.props.months);
+    // console.log(this.props.month);
     return (
-      <div className="month">
-        <button className="" onClick={() => this.props.clickHandlerPrev()}>
-          PREV
-        </button>
-        <button className="" onClick={() => this.props.clickHandler()}>
-          NEXT
-        </button>
-        <h1>{this.props.months[this.props.month]}</h1>
+      <div className="monthNavBar">
+        <Navbar />
       </div>
     );
   }
