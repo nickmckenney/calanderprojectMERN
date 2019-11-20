@@ -188,6 +188,7 @@ class App extends Component {
     } else {
       this.setState({ month: this.state.month + 1 });
     }
+    this.setState({ dayOfTheWeek: this.firstDay(this.state.month) });
   };
 
   // Decreases state.month by 1. If it's January, it will roll over to December. (WDC)
@@ -199,15 +200,14 @@ class App extends Component {
     } else {
       this.setState({ month: this.state.month - 1 });
     }
+    this.setState({ dayOfTheWeek: this.firstDay() });
   };
 
   componentDidMount() {
     console.log("COMPONENTDIDMOUNT");
     this.grabHolidayMonth();
     this.grabBirthdayMonth();
-    this.setState({dayOfTheWeek: this.firstDay(this.state.month)})
-    this.setState({ dayOfTheWeekNext: this.firstDay(this.state.month + 1) });
-    this.setState({ dayOfTheWeekPrev: this.firstDay(this.state.month -1) });
+    this.setState({dayOfTheWeek: this.firstDay()})
   }
 
   render() {
