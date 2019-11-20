@@ -155,6 +155,7 @@ class App extends Component {
   };
 
   // Calculates what day of the week the first day of the month falls on. (WDC)
+  // In this.state.dayOfWeek, you'll have a code. 0 is Sunday, 1 is Monday, etc.
   firstDay = () => {
     let twoDigit = this.state.year % 100;
     let yearCode = (twoDigit + Math.floor(twoDigit / 4)) % 7;
@@ -171,9 +172,10 @@ class App extends Component {
   };
 
   // Increases state.month by 1. If it's December, it will roll over to January. (WDC)
+  // Year in state will also change properly.
   monthNext = () => {
     if (this.state.month === 12) {
-      console.log(this.state.month);
+      this.setState({ year: this.state.year + 1})
       this.setState({ month: 1 });
     } else {
       this.setState({ month: this.state.month + 1 });
@@ -181,8 +183,10 @@ class App extends Component {
   };
 
   // Decreases state.month by 1. If it's January, it will roll over to December. (WDC)
+  // Year in state will also change properly.
   monthPrevoius = () => {
     if (this.state.month === 1) {
+      this.setState({ year: this.state.year - 1 });
       this.setState({ month: 12 });
     } else {
       this.setState({ month: this.state.month - 1 });
