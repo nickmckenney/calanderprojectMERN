@@ -8,7 +8,6 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      index: 0,
       squares: [],
       month: 1,
       year: 2019,
@@ -120,7 +119,6 @@ class App extends Component {
           {...this.state}
           dayCounter={this.dayCounter}
           days={this.daysPerMonth}
-          index={this.state.index}
         />
         <Month
           {...this.state}

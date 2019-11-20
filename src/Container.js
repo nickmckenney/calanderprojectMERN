@@ -9,7 +9,6 @@ class Board extends React.Component {
     var rows = [];
 
     let days = this.props.days;
-    let index = this.props.index + 1;
 
     for (var i = 0; i < 35; i++) {
       rows.push(<Square value={1} key={i} />);
