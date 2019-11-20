@@ -11,3 +11,11 @@ button:focus {
     filter: brightness(95%);
     transition: 0.3s ease;
 }
+
+.month {
+    text-align: center;
+}
+
+.yearContainer {
+    font-size: 16px;
+}
