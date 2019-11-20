@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Navbar.css";
-import "bootstrap/dist/css/bootstrap.css";
+// import "bootstrap/dist/css/bootstrap.css";
 import Monthnav from "../Monthnav/Monthnav";
 import Accordion from "../Accordion/Accordion";
 import "../../App.css";
@@ -16,7 +16,7 @@ class Navbar extends Component {
 
   render() {
     return (
-      <nav class="navbar navbar-light bg-light">
+      <nav className="navbar navbar-light bg-light">
         <Accordion />
 
         <div className="monthContainer">
@@ -35,15 +35,15 @@ class Navbar extends Component {
           </button>
         </div>
 
-        <form class="form-inline my-2 my-lg-0">
+        <form className="form-inline my-2 my-lg-0">
           <input
-            class="form-control mr-sm-2"
+            className="form-control mr-sm-2"
             type="search"
             placeholder="Search"
             aria-label="Search"
           />
           <button
-            class="btn btn-outline-primary my-2 my-sm-0"
+            className="btn btn-outline-primary my-2 my-sm-0"
             type="submit"
             onClick={e => this.linkHandler(e)}
           >

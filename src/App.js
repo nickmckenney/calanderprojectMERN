@@ -13,7 +13,7 @@ class App extends Component {
       isLoading: false,
       holidayArray: [],
       birthdayArray: [],
-      dayOfTheWeek: 0
+      dayOfTheWeek: 0 //Where the first day starts
     };
     this.apiURL = "https://calendar-api-deploy.herokuapp.com/";
     // [0] is null so that month numbers match. (WDC)
@@ -175,7 +175,7 @@ class App extends Component {
   // Year in state will also change properly.
   monthNext = () => {
     if (this.state.month === 12) {
-      this.setState({ year: this.state.year + 1})
+      this.setState({ year: this.state.year + 1 });
       this.setState({ month: 1 });
     } else {
       this.setState({ month: this.state.month + 1 });

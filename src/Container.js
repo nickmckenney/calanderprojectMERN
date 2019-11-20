@@ -11,6 +11,7 @@ class Board extends React.Component {
     let days = this.props.days;
 
     for (var i = 0; i < 35; i++) {
+      console.log(this.props.dayOfTheWeek);
       rows.push(<Square value={i} key={i} />);
     }
     return <div>{rows}</div>;
