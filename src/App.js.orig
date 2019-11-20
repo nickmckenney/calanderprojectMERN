@@ -50,7 +50,10 @@ class App extends Component {
       "11",
       "12"
     ];
+<<<<<<< HEAD
     // [0] is null so that month numbers match. (WDC)
+=======
+>>>>>>> a10878ce1642825525a8c865e45d82df801faf68
     this.monthCodes = [null, 0, 3, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5];
     this.centuryCode = 6;
   }
@@ -80,9 +83,15 @@ class App extends Component {
     this.setState({ isLoading: true });
     fetch(
       this.apiURL +
+<<<<<<< HEAD
         "holiday/date-short/" +
         `${this.monthStrings[this.state.month]}-01/` +
         `${this.monthStrings[this.state.month]}-${
+=======
+        "holiday/date/" +
+        `${this.state.year}-${this.monthStrings[this.state.month]}-01/` +
+        `${this.state.year}-${this.monthStrings[this.state.month]}-${
+>>>>>>> a10878ce1642825525a8c865e45d82df801faf68
           this.daysPerMonth[this.state.month]
         }`
     )
@@ -137,6 +146,10 @@ class App extends Component {
     let dayOfWeek =
       ((yearCode + monthCode + this.centuryCode + 1 + leapYear) % 7) % 7;
     this.setState({ dayOfTheWeek: dayOfWeek });
+<<<<<<< HEAD
+=======
+    console.log(leapYear);
+>>>>>>> a10878ce1642825525a8c865e45d82df801faf68
   };
 
   // Increases state.month by 1. If it's December, it will roll over to January. (WDC)
