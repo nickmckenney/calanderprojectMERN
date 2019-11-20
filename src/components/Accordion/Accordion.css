@@ -1,0 +1,29 @@
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50px;
+    height: 40px;
+    border: 1px solid #33A0FF;
+    border-radius: 0.3vw;
+    transition: 0.3s ease;
+}
+
+.burger {
+    width: 25px;
+    margin: 3px auto;
+    border: 1px solid #33A0FF;
+    transition: 0.3s ease;
+}
+
+.hamburger:hover, .hamburger:hover .burger {
+    background: #33A0FF;
+    border: 1px solid white;
+    transition: 0.3s ease;
+}
+
+.hamburger:active, .hamburger:active .burger {
+    outline-style: none;
+    filter: brightness(90%);
+    transition: 0.3s ease;
+}

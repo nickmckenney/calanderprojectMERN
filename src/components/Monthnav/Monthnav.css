@@ -1,0 +1,43 @@
+button:focus {
+    outline: none;
+}
+
+.monthContainer {
+    margin: 0 auto;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: center;
+    align-self: center;
+}
+
+.arrow {
+    border-style: none;
+    font-size: 30px;
+    padding: 0 20px;
+    transition: 0.3s ease;
+    background: none;
+}
+
+.previous:hover {
+    margin-right: 10px;
+    margin-left: -10px;
+    transition: 0.3s ease;
+}
+
+.next:hover {
+    margin-left: 10px;
+    margin-right: -10px;
+    transition: 0.3s ease;
+}
+
+.arrow:focus {
+    outline: none;
+}
+
+.month {
+    font-size: 30px;
+    margin: 0 2vw;
+    transition: 0.3s ease;
+}
