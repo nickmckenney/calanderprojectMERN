@@ -9,12 +9,15 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-describe("Counter component", () => {
+describe("App component", () => {
   let component;
   beforeEach(() => {
     component = shallow(<App />);
   });
   it("should have a state attribute called month initialized to 1", () => {
     expect(component.state("month")).toEqual(1);
+  });
+  it("should have a state attribute called year initialized to 2019", () => {
+    expect(component.state("year")).toEqual(2019);
   });
 });
