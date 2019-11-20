@@ -7,9 +7,11 @@ class Board extends React.Component {
   }
   renderSquare = () => {
     var rows = [];
-    let containerForDays = [];
+
+    let days = this.props.days;
+
     for (var i = 0; i < 35; i++) {
-      rows.push(<Square value={containerForDays[i]} key={i} />);
+      rows.push(<Square value={1} key={i} />);
     }
     return <div>{rows}</div>;
   };

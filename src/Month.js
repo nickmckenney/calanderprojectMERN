@@ -8,13 +8,16 @@ class Month extends React.Component {
   }
 
   render() {
+    console.log(this.props.months);
     return (
       <div className="month">
-        <button className="btn" onClick={() => this.props.clickHandler()}>
-          Click Me
+        <button className="" onClick={() => this.props.clickHandlerPrev()}>
+          PREV
         </button>
-
-        {/* <h1>{this.props.months[this.props.index]}</h1> */}
+        <button className="" onClick={() => this.props.clickHandler()}>
+          NEXT
+        </button>
+        <h1>{this.props.months[this.props.month]}</h1>
       </div>
     );
   }
