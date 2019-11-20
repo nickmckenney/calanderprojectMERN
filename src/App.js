@@ -171,7 +171,6 @@ class App extends Component {
       ((yearCode + monthCode + this.centuryCode + 1 + leapYear) % 7) % 7;
 
     this.setState({ dayOfTheWeek: dayOfWeek });
-    console.log(dayOfWeek);
   };
 
   // Increases state.month by 1. If it's December, it will roll over to January. (WDC)

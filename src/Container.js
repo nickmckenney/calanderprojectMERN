@@ -8,9 +8,10 @@ class Board extends React.Component {
   renderSquare = () => {
     var rows = [];
     let q = 1;
+
+    let monthdaySkiper = this.props.dayOfTheWeek;
     let holidays = this.props.holidayArray;
     let daysInMonth = this.props.days[this.props.month];
-    console.log(daysInMonth);
     let printDays = [];
 
     while (daysInMonth != 0) {
@@ -18,7 +19,12 @@ class Board extends React.Component {
       q += 1;
       daysInMonth -= 1;
     }
-    for (var i = 0; i < 35; i++) {
+
+    for (let yoboi = 0; yoboi < monthdaySkiper; yoboi++) {
+      rows.push(<Square value={"."} key={yoboi + 100} />);
+    }
+
+    for (var i = 0; i < 35 - monthdaySkiper; i++) {
       if (printDays[i] > daysInMonth) {
         rows.push(<Square value={printDays[i]} key={i} />);
       } else {
