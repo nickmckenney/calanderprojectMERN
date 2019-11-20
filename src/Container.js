@@ -8,12 +8,12 @@ class Board extends React.Component {
   renderSquare = () => {
     var rows = [];
 
-    let days = this.props.days;
-    console.log(this.props.holidayArray);
+    let holidays = this.props.holidayArray;
+    let daysInMonth = this.props.days[this.props.month];
+    console.log(daysInMonth);
     for (var i = 0; i < 35; i++) {
-      rows.push(<Square value={i} key={i} />);
+      rows.push(<Square value={1} key={i} />);
     }
-    // console.log(this.props.dayOfTheWeek);
     return <div>{rows}</div>;
   };
   render() {
