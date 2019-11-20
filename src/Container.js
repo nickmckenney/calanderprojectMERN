@@ -9,11 +9,11 @@ class Board extends React.Component {
     var rows = [];
 
     let days = this.props.days;
-
+    console.log(this.props.holidayArray);
     for (var i = 0; i < 35; i++) {
-      console.log(this.props.dayOfTheWeek);
       rows.push(<Square value={i} key={i} />);
     }
+    // console.log(this.props.dayOfTheWeek);
     return <div>{rows}</div>;
   };
   render() {
