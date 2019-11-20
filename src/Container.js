@@ -24,7 +24,7 @@ class Board extends React.Component {
       rows.push(<Square value={"."} key={yoboi + 100} />);
     }
 
-    for (var i = 0; i < 35 - monthdaySkiper; i++) {
+    for (var i = 0; i < 42 - monthdaySkiper; i++) {
       if (printDays[i] > daysInMonth) {
         rows.push(<Square value={printDays[i]} key={i} />);
       } else {
