@@ -14,7 +14,7 @@ class Month extends React.Component {
         <button className="" onClick={() => this.props.clickHandlerPrev()}>
           PREV
         </button>
-        <button className="btn" onClick={() => this.props.clickHandler()}>
+        <button className="" onClick={() => this.props.clickHandler()}>
           NEXT
         </button>
         <h1>{this.props.months[this.props.month]}</h1>
