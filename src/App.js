@@ -2,10 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Container from "./Container";
 import Aside from "./Aside";
-import Month from "./Month";
-import Monthnav from "../src/components/Monthnav/Monthnav";
-// import Monthnav from "./components/Navbar/Navbar";
-import { parse } from "date-fns";
+import Navbar from "./components/Navbar/Navbar";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -200,17 +197,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Monthnav
+        <Navbar
           clickHandler={this.monthNext}
           clickHandlerPrev={this.monthPrevoius}
           months={this.months}
           {...this.state}
-        />
-        <Month
-          {...this.state}
-          clickHandler={this.monthNext}
-          clickHandlerPrev={this.monthPrevoius}
-          months={this.months}
         />
         <Container
           {...this.state}

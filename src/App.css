@@ -19,7 +19,7 @@
   background-color: orange;
   grid-row: 2 / span1;
 }
-.monthNavBar {
+.navbar {
   grid-row: 1;
   grid-column: 1 / span3;
 }
