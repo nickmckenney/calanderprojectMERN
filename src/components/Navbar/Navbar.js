@@ -18,7 +18,6 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-light bg-light">
         <Accordion />
-
         <div className="monthContainer">
           <button
             onClick={() => this.props.clickHandlerPrev()}
@@ -26,10 +25,7 @@ class Navbar extends Component {
           >
             &#8249;
           </button>
-          <span className="month">
-            {this.props.months[this.props.month]}
-            {this.props.year}
-          </span>
+          <span className="month">{this.props.months[this.props.month]}</span>
           <button
             onClick={() => this.props.clickHandler()}
             className="arrow next"
