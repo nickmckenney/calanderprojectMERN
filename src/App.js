@@ -19,8 +19,6 @@ class App extends Component {
       holidayArray: [],
       birthdayArray: [],
       dayOfTheWeek: 0, //Where the first day starts
-      dayOfTheWeekNext: 0,
-      dayOfTheWeekPrev: 0
     };
     this.apiURL = "https://calendar-api-deploy.herokuapp.com/";
     // [0] is null so that month numbers match. (WDC)
@@ -164,12 +162,12 @@ class App extends Component {
   // Calculates what day of the week the first day of the month falls on. (WDC)
   // In this.state.dayOfWeek, you'll have a code. 0 is Sunday, 1 is Monday, etc.
 
-  firstDay = (currentMonth = this.state.month) => {
-    let twoDigit = this.state.year % 100;
+  firstDay = (currentMonth = this.state.month, currentYear = this.state.year) => {
+    let twoDigit = currentYear % 100;
     let yearCode = (twoDigit + Math.floor(twoDigit / 4)) % 7;
     let monthCode = this.monthCodes[currentMonth];
     let leapYear = 0;
-    if (this.state.year % 4 === 0) {
+    if (currentYear % 4 === 0) {
       leapYear = 1;
     } else {
       leapYear = 0;
@@ -183,14 +181,14 @@ class App extends Component {
   // Year in state will also change properly.
   monthNext = () => {
     console.log("Next");
-
     if (this.state.month === 12) {
       this.setState({ year: this.state.year + 1 });
       this.setState({ month: 1 });
+      this.setState({ dayOfTheWeek: this.firstDay(1, this.state.year + 1)});
     } else {
       this.setState({ month: this.state.month + 1 });
+      this.setState({ dayOfTheWeek: this.firstDay(this.state.month + 1, this.state.year) });
     }
-    this.setState({ dayOfTheWeek: this.firstDay(this.state.month + 1) });
   };
 
   // Decreases state.month by 1. If it's January, it will roll over to December. (WDC)
@@ -200,10 +198,11 @@ class App extends Component {
     if (this.state.month === 1) {
       this.setState({ year: this.state.year - 1 });
       this.setState({ month: 12 });
+      this.setState({ dayOfTheWeek: this.firstDay(12, this.state.year - 1) });
     } else {
       this.setState({ month: this.state.month - 1 });
+      this.setState({ dayOfTheWeek: this.firstDay(this.state.month - 1, this.state.year) });
     }
-    this.setState({ dayOfTheWeek: this.firstDay(this.state.month - 1) });
   };
 
   componentDidMount() {
