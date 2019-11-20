@@ -11,7 +11,7 @@ class Board extends React.Component {
     let days = this.props.days;
 
     for (var i = 0; i < 35; i++) {
-      rows.push(<Square value={1} key={i} />);
+      rows.push(<Square value={i} key={i} />);
     }
     return <div>{rows}</div>;
   };
