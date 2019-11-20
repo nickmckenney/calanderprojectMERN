@@ -112,19 +112,17 @@ class App extends Component {
   }
 
   // Fetches the holidays for the current month (WDC)
-  grabHolidayMonth = () => {
+  grabHolidayMonth = (currentMonth = this.state.month) => {
     this.setState({ isLoading: true });
     fetch(
       this.apiURL +
         "holiday/date-short/" +
-        `${this.monthStrings[this.state.month]}-01/` +
-        `${this.monthStrings[this.state.month]}-${
-          this.daysPerMonth[this.state.month]
-        }`
+        `${this.monthStrings[currentMonth]}-01/` +
+        `${this.monthStrings[currentMonth]}-31`
     )
       .then(res => res.json())
       .then(res => {
-        console.log("Got Holiday Data");
+        console.log("Got Holiday Data", res);
         this.setState({
           holidayArray: this.parseData(res),
           isLoading: false
@@ -136,19 +134,17 @@ class App extends Component {
   };
 
   // Fetches birthdays for current month (WDC)
-  grabBirthdayMonth = () => {
+  grabBirthdayMonth = (currentMonth = this.state.month) => {
     this.setState({ isLoading: true });
     fetch(
       this.apiURL +
         "birthday/date-short/" +
-        `${this.monthStrings[this.state.month]}-01/` +
-        `${this.monthStrings[this.state.month]}-${
-          this.daysPerMonth[this.state.month]
-        }`
+        `${this.monthStrings[currentMonth]}-01/` +
+        `${this.monthStrings[currentMonth]}-31`
     )
       .then(res => res.json())
       .then(res => {
-        console.log("Got Birthady Data");
+        console.log("Got Birthady Data", res);
         this.setState({
           birthdayArray: this.parseData(res),
           isLoading: false
@@ -182,12 +178,13 @@ class App extends Component {
   monthNext = () => {
     console.log("Next");
     if (this.state.month === 12) {
-      this.setState({ year: this.state.year + 1 });
-      this.setState({ month: 1 });
-      this.setState({ dayOfTheWeek: this.firstDay(1, this.state.year + 1)});
+      this.setState({ year: this.state.year + 1, month: 1, dayOfTheWeek: this.firstDay(1, this.state.year + 1) });
+      this.grabHolidayMonth(1);
+      this.grabBirthdayMonth(1);
     } else {
-      this.setState({ month: this.state.month + 1 });
-      this.setState({ dayOfTheWeek: this.firstDay(this.state.month + 1, this.state.year) });
+      this.setState({ month: this.state.month + 1, dayOfTheWeek: this.firstDay(this.state.month + 1, this.state.year) });
+      this.grabHolidayMonth(this.state.month + 1);
+      this.grabBirthdayMonth(this.state.month + 1);
     }
   };
 
@@ -196,12 +193,13 @@ class App extends Component {
   monthPrevoius = () => {
     console.log("PREVIOUS");
     if (this.state.month === 1) {
-      this.setState({ year: this.state.year - 1 });
-      this.setState({ month: 12 });
-      this.setState({ dayOfTheWeek: this.firstDay(12, this.state.year - 1) });
+      this.setState({ year: this.state.year - 1, month: 12, month: 12, dayOfTheWeek: this.firstDay(12, this.state.year - 1) });
+      this.grabHolidayMonth(12);
+      this.grabBirthdayMonth(12);
     } else {
-      this.setState({ month: this.state.month - 1 });
-      this.setState({ dayOfTheWeek: this.firstDay(this.state.month - 1, this.state.year) });
+      this.setState({ month: this.state.month - 1, dayOfTheWeek: this.firstDay(this.state.month - 1, this.state.year) });
+      this.grabHolidayMonth(this.state.month - 1);
+      this.grabBirthdayMonth(this.state.month - 1);
     }
   };
 
