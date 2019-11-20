@@ -161,7 +161,9 @@ class App extends Component {
 
   // Calculates what day of the week the first day of the month falls on. (WDC)
   // In this.state.dayOfWeek, you'll have a code. 0 is Sunday, 1 is Monday, etc.
+
   firstDay = () => {
+    console.log("2");
     let twoDigit = this.state.year % 100;
     let yearCode = (twoDigit + Math.floor(twoDigit / 4)) % 7;
     let monthCode = this.monthCodes[this.state.month];
@@ -191,6 +193,8 @@ class App extends Component {
     } else {
       this.setState({ month: this.state.month + 1 });
     }
+    console.log("1");
+
     this.firstDay();
   };
 
@@ -203,10 +207,13 @@ class App extends Component {
     } else {
       this.setState({ month: this.state.month - 1 });
     }
+    console.log("1");
+
     this.firstDay();
   };
 
   componentDidMount() {
+    console.log("COMPONENTDIDMOUNT");
     this.grabHolidayMonth();
     this.grabBirthdayMonth();
     this.firstDay();
