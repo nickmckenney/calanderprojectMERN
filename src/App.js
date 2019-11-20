@@ -171,14 +171,7 @@ class App extends Component {
       ((yearCode + monthCode + this.centuryCode + 1 + leapYear) % 7) % 7;
 
     this.setState({ dayOfTheWeek: dayOfWeek });
-<<<<<<< HEAD
     console.log(dayOfWeek);
-=======
-    console.log("leap " + leapYear);
-    console.log("dow " + dayOfWeek);
-    console.log("dotw " + this.state.dayOfTheWeek);
-    console.log("NEW STATE");
->>>>>>> 9da0999c0432fa23a7417cc61b0c88660aad5f9f
   };
 
   // Increases state.month by 1. If it's December, it will roll over to January. (WDC)
@@ -202,11 +195,7 @@ class App extends Component {
     } else {
       this.setState({ month: this.state.month - 1 });
     }
-<<<<<<< HEAD
-    this.firstDay()
-=======
     this.firstDay();
->>>>>>> 9da0999c0432fa23a7417cc61b0c88660aad5f9f
   };
 
   componentDidMount() {
