@@ -89,10 +89,12 @@ class App extends Component {
     let dayOfWeek =
       ((yearCode + monthCode + this.centuryCode + 1 + leapYear) % 7) % 7;
     this.setState({ dayOfTheWeek: dayOfWeek });
+    console.log(leapYear);
   };
 
   monthNext = () => {
     if (this.state.month === 12) {
+      console.log(this.state.month);
       this.setState({ month: 1 });
     } else {
       this.setState({ month: this.state.month + 1 });
@@ -104,21 +106,6 @@ class App extends Component {
       this.setState({ month: 12 });
     } else {
       this.setState({ month: this.state.month - 1 });
-    }
-  };
-
-  clickHandler = () => {
-    if (this.state.index < 11) {
-      this.setState({
-        index: this.state.index + 1
-      });
-    }
-  };
-  clickHandlerPrev = () => {
-    if (this.state.index > 0) {
-      this.setState({
-        index: this.state.index - 1
-      });
     }
   };
   componentDidMount() {
@@ -138,8 +125,8 @@ class App extends Component {
         <Month
           {...this.state}
           months={this.months}
-          clickHandler={this.clickHandler}
-          clickHandlerPrev={this.clickHandlerPrev}
+          clickHandler={this.monthNext}
+          clickHandlerPrev={this.monthPrevoius}
         />
         <Aside />
       </div>
