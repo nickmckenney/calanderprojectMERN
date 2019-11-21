@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-import Container from "./Container";
-import Aside from "./Aside";
 import Navbar from "./components/Navbar/Navbar";
-
+import Aside from "./Aside";
+import Container from "./Container";
 import { configure } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 configure({ adapter: new Adapter() });
@@ -241,13 +240,12 @@ class App extends Component {
           months={this.months}
           {...this.state}
         />
+        <Aside />
         <Container
           {...this.state}
           dayCounter={this.dayCounter}
           days={this.daysPerMonth}
         />
-
-        <Aside />
       </div>
     );
   }
