@@ -23,7 +23,7 @@ class Delete extends Component {
         this.searchArray = res;
         this.isLoading = false;
         // / Sends res back to display from a props function
-        this.props.setSearchArray(res);
+        this.props.displayUpdate(res);
       })
       .catch(err => {
         console.log("We've got a problem, sir.", err);
@@ -44,7 +44,7 @@ class Delete extends Component {
               placeholder="ID (Required to delete)"
               onChange={this.setID}
               className="form-control"
-              style={{ width: "400px" }}
+              style={{ width: "200px" }}
             />
             <div className="space-five"></div>
             <button
