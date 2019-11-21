@@ -38,13 +38,13 @@ class Delete extends Component {
     return (
       <div>
         <form className="form-inline">
-          <div className="form-group amiibo-delete">
+          <div className="form-group amiibo-delete containerInput">
             <input
               type="text"
               placeholder="ID (Required to delete)"
               onChange={this.setID}
               className="form-control"
-              style={{ width: "200px" }}
+              style={{ width: "55%" }}
             />
             <div className="space-five"></div>
             <button

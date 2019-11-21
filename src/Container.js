@@ -30,9 +30,7 @@ class Board extends React.Component {
     console.log(holiday);
     for (let x = 1; x < holidays.length; x++) {
       if (holidays[x].length > 1) {
-        // for (let p = 1; p < holidays[x].length; p++) {
         holiday.push(holidays[x][1].name);
-        // }
       } else {
         holiday.push("");
       }
@@ -40,14 +38,11 @@ class Board extends React.Component {
 
     for (let x = 1; x < birthdays.length; x++) {
       if (birthdays[x].length > 1) {
-        // for (let p = 1; p < holidays[x].length; p++) {
         birthday.push(birthdays[x][1].name);
-        // }
       } else {
         birthday.push("");
       }
     }
-    console.log(birthday);
     for (let count = 0; count < monthdaySkiper; count++) {
       rows.push(<Square value={"."} key={count + 400} />);
     }
