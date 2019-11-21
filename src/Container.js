@@ -26,14 +26,22 @@ class Board extends React.Component {
       q += 1;
       daysInMonth -= 1;
     }
+    let id = [];
 
-    console.log(holiday);
+    for (let x = 1; x < birthdays.length; x++) {
+      if (birthdays[x].length > 1) {
+        id.push(birthdays[x][1]._id);
+      } else {
+        id.push("");
+      }
+    }
+
     for (let x = 1; x < holidays.length; x++) {
       if (holidays[x].length > 1) {
         if (holidays[x][1].name.length > 1) {
           holiday.push(holidays[x][1].name);
         } else {
-          holiday.push("")
+          holiday.push("");
         }
       } else {
         holiday.push("");
@@ -58,6 +66,7 @@ class Board extends React.Component {
             value={printDays[i]}
             info={holiday[i]}
             bDay={birthday[i]}
+            dayId={id[i]}
             key={i}
           />
         );
