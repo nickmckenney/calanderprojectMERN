@@ -39,13 +39,13 @@ class Delete extends Component {
       <div>
         <form className="form-inline">
           <div className="form-group">
-            <input
+            {/* <input
               type="text"
               placeholder="ID (Required to delete)"
               onChange={this.setID}
               className="form-control"
               style={{ width: "400px" }}
-            />
+            /> */}
             <div className="space-five"></div>
             <button
               className="btn btn-danger"
@@ -62,4 +62,3 @@ class Delete extends Component {
 }
 
 export default Delete;
-
