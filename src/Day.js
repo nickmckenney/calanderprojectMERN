@@ -6,10 +6,14 @@ class Square extends React.Component {
     super(props);
   }
 
+  clickDay = () => {
+    console.log(this.props.info)
+  }
+
   render() {
     if (this.props.value !== ".") {
       return (
-        <div className={"square"}>{this.props.value}
+        <div className={"square"} onClick={this.clickDay}>{this.props.value}
           <div className="holidayContainer">
             <h4 className="info">{this.props.info}</h4>
             <br></br>

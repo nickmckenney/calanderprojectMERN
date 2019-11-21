@@ -238,9 +238,11 @@ class App extends Component {
           clickHandler={this.monthNext}
           clickHandlerPrev={this.monthPrevoius}
           months={this.months}
-          {...this.state}
+          apiURL={this.apiURL}
         />
-        <Aside />
+        <Aside
+          apiURL={this.apiURL}
+        />
         <Container
           {...this.state}
           dayCounter={this.dayCounter}
