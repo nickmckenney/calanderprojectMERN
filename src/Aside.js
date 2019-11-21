@@ -11,9 +11,10 @@ class Aside extends Component {
     this.display = res
   }
   render() {
+    console.log(this.props);
     return (
       <div className="aside">
-        <Delete displayUpdate={this.displayUpdate}/>
+        <Delete apiURL={this.props.apiURL} displayUpdate={this.displayUpdate}/>
       </div>
     )
   }
