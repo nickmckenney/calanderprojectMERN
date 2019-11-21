@@ -30,7 +30,11 @@ class Board extends React.Component {
     console.log(holiday);
     for (let x = 1; x < holidays.length; x++) {
       if (holidays[x].length > 1) {
-        holiday.push(holidays[x][1].name);
+        if (holidays[x][1].name.length > 1) {
+          holiday.push(holidays[x][1].name);
+        } else {
+          holiday.push("")
+        }
       } else {
         holiday.push("");
       }
