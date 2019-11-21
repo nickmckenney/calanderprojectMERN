@@ -7,7 +7,11 @@ class Square extends React.Component {
   }
 
   render() {
-    return <div className="square">{this.props.value}</div>;
+    if (this.props.value !== ".") {
+      return <div className={"square"}>{this.props.value}</div>;
+    } else if (this.props.value === ".") {
+    return <div className={"square fill"}>.</div>
+    }
   }
 }
 export default Square;
