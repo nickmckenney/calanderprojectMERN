@@ -63,11 +63,16 @@
   color: white;
   background: rgba(199, 201, 226, 0.5);
 }
+
+
+
 .info {
   color: red;
+  font-size: 12px;
 }
 .holiday {
   background-color: green;
+  font-size: 12px;
   color: white;
 }
 h4 {
@@ -77,4 +82,9 @@ h4 {
   text-align: center;
   padding-left: 3px;
   padding-right: 3px;
+}
+.rows{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
