@@ -17,7 +17,7 @@ class App extends Component {
       isLoading: false,
       holidayArray: [],
       birthdayArray: [],
-      dayOfTheWeek: 0, //Where the first day starts
+      dayOfTheWeek: 0 //Where the first day starts
     };
     this.apiURL = "https://calendar-api-deploy.herokuapp.com/";
     // [0] is null so that month numbers match. (WDC)
@@ -132,6 +132,10 @@ class App extends Component {
       });
   };
 
+  sum(a, b) {
+    return a + b;
+  }
+
   // Fetches birthdays for current month (WDC)
   grabBirthdayMonth = (currentMonth = this.state.month) => {
     this.setState({ isLoading: true });
@@ -157,7 +161,10 @@ class App extends Component {
   // Calculates what day of the week the first day of the month falls on. (WDC)
   // In this.state.dayOfWeek, you'll have a code. 0 is Sunday, 1 is Monday, etc.
 
-  firstDay = (currentMonth = this.state.month, currentYear = this.state.year) => {
+  firstDay = (
+    currentMonth = this.state.month,
+    currentYear = this.state.year
+  ) => {
     let twoDigit = currentYear % 100;
     let yearCode = (twoDigit + Math.floor(twoDigit / 4)) % 7;
     let monthCode = this.monthCodes[currentMonth];
@@ -177,11 +184,18 @@ class App extends Component {
   monthNext = () => {
     console.log("Next");
     if (this.state.month === 12) {
-      this.setState({ year: this.state.year + 1, month: 1, dayOfTheWeek: this.firstDay(1, this.state.year + 1) });
+      this.setState({
+        year: this.state.year + 1,
+        month: 1,
+        dayOfTheWeek: this.firstDay(1, this.state.year + 1)
+      });
       this.grabHolidayMonth(1);
       this.grabBirthdayMonth(1);
     } else {
-      this.setState({ month: this.state.month + 1, dayOfTheWeek: this.firstDay(this.state.month + 1, this.state.year) });
+      this.setState({
+        month: this.state.month + 1,
+        dayOfTheWeek: this.firstDay(this.state.month + 1, this.state.year)
+      });
       this.grabHolidayMonth(this.state.month + 1);
       this.grabBirthdayMonth(this.state.month + 1);
     }
@@ -192,11 +206,19 @@ class App extends Component {
   monthPrevoius = () => {
     console.log("PREVIOUS");
     if (this.state.month === 1) {
-      this.setState({ year: this.state.year - 1, month: 12, month: 12, dayOfTheWeek: this.firstDay(12, this.state.year - 1) });
+      this.setState({
+        year: this.state.year - 1,
+        month: 12,
+        month: 12,
+        dayOfTheWeek: this.firstDay(12, this.state.year - 1)
+      });
       this.grabHolidayMonth(12);
       this.grabBirthdayMonth(12);
     } else {
-      this.setState({ month: this.state.month - 1, dayOfTheWeek: this.firstDay(this.state.month - 1, this.state.year) });
+      this.setState({
+        month: this.state.month - 1,
+        dayOfTheWeek: this.firstDay(this.state.month - 1, this.state.year)
+      });
       this.grabHolidayMonth(this.state.month - 1);
       this.grabBirthdayMonth(this.state.month - 1);
     }
