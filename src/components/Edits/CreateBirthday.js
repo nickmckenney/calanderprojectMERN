@@ -13,7 +13,7 @@ class BirthdayUpdateAdd extends Component {
   editByID = event => {
     event.preventDefault();
     this.isLoading = true;
-    fetch(this.props.apiURL + "/id/" + this.editID, {
+    fetch(this.props.apiURL + "birthday/id/" + this.editID, {
       method: "PUT",
       body: JSON.stringify(this.data),
       headers: { "Content-Type": "application/json" }
@@ -34,7 +34,7 @@ class BirthdayUpdateAdd extends Component {
   AddNew = event => {
     event.preventDefault();
     this.isLoading = true;
-    fetch(this.props.apiURL, {
+    fetch(this.props.apiURL + "birthday", {
       method: "POST",
       body: JSON.stringify(this.data),
       headers: { "Content-Type": "application/json" }

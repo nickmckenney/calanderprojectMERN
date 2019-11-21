@@ -13,7 +13,7 @@ class Delete extends Component {
   delete = event => {
     event.preventDefault();
     this.isLoading = true;
-    fetch(this.props.apiURL + "birthday/id/" + this.editID, {
+    fetch(this.props.apiURL + "holiday/id/" + this.editID, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" }
     })
