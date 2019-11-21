@@ -30,6 +30,9 @@ class BirthdayUpdateAdd extends Component {
         console.log("We've got a problem, sir.", err);
       });
   };
+  // Switching to post
+  // Switching to post
+  // Switching to post
 
   AddNew = event => {
     event.preventDefault();
@@ -105,6 +108,7 @@ class BirthdayUpdateAdd extends Component {
                 Add
               </button>
             </div>
+
             <div className="form-group">
               <input
                 type="text"
