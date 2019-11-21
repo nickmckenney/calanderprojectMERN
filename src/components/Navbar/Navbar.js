@@ -5,10 +5,6 @@ import Monthnav from "../Monthnav/Monthnav";
 import Accordion from "../Accordion/Accordion";
 import "../../App.css";
 
-import { configure } from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
-configure({ adapter: new Adapter() });
-
 class Navbar extends Component {
   constructor(props) {
     super(props);
