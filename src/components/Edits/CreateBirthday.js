@@ -13,7 +13,7 @@ class BirthdayUpdateAdd extends Component {
   editByID = event => {
     event.preventDefault();
     this.isLoading = true;
-    fetch(this.props.apiURL + "/id/" + this.editID, {
+    fetch(this.props.apiURL + "birthday/id/" + this.editID, {
       method: "PUT",
       body: JSON.stringify(this.data),
       headers: { "Content-Type": "application/json" }
@@ -34,7 +34,8 @@ class BirthdayUpdateAdd extends Component {
   AddNew = event => {
     event.preventDefault();
     this.isLoading = true;
-    fetch(this.props.apiURL, {
+    console.log(this.props.apiURL + "birthday/");
+    fetch((this.props.apiURL + "birthday/"), {
       method: "POST",
       body: JSON.stringify(this.data),
       headers: { "Content-Type": "application/json" }
@@ -45,7 +46,7 @@ class BirthdayUpdateAdd extends Component {
         this.searchArray = res;
         this.isLoading = false;
         // Sends res back to display from a props function
-        this.props.setSearchArray(res);
+        // this.props.setSearchArray(res);
       })
       .catch(err => {
         console.log("We've got a problem, sir.", err);
@@ -79,7 +80,7 @@ class BirthdayUpdateAdd extends Component {
       <div>
         <div className="amiibo-search-ID">
           Edit/Add By ID
-          <form className="form-inline">
+          <form className="form-inline editAdd">
             <div className="form-group">
               <input
                 type="text"
@@ -130,3 +131,5 @@ class BirthdayUpdateAdd extends Component {
     );
   }
 }
+
+export default BirthdayUpdateAdd;

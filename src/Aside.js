@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Delete from "./components/Edits/DeleteBirthday";
+import Create from "./components/Edits/CreateBirthday";
 
 class Aside extends Component {
   constructor(props) {
@@ -15,6 +16,7 @@ class Aside extends Component {
     return (
       <div className="aside">
         <Delete apiURL={this.props.apiURL} displayUpdate={this.displayUpdate}/>
+        <Create apiURL={this.props.apiURL} displayUpdate={this.displayUpdate}/>
       </div>
     )
   }

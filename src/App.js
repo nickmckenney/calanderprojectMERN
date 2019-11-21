@@ -239,6 +239,7 @@ class App extends Component {
           clickHandlerPrev={this.monthPrevoius}
           months={this.months}
           apiURL={this.apiURL}
+          {...this.state}
         />
         <Aside
           apiURL={this.apiURL}
