@@ -9,19 +9,36 @@
   height: 13.7vh;
   background-color: white;
   border: 1px solid black;
-  display: inline-block;
 }
 .container {
   grid-row: 3 / span 1;
   grid-column: 2;
 }
-
+.rows {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 .aside {
-  /* width: 10px; */
-
+  background: chartreuse;
   grid-row: 2 / span1;
 }
 .navbar {
   grid-row: 1;
   grid-column: 1 / span3;
+}
+.info {
+  color: red;
+}
+.holiday {
+  background-color: green;
+  color: white;
+}
+h4 {
+  margin: 0 auto;
+  font-size: 9px;
+  padding: 0px;
+  text-align: center;
+  padding-left: 3px;
+  padding-right: 3px;
 }

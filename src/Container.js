@@ -11,8 +11,15 @@ class Board extends React.Component {
 
     let monthdaySkiper = this.props.dayOfTheWeek;
     let holidays = this.props.holidayArray;
+    let birthdays = this.props.birthdayArray;
+
+    console.log(holidays);
     let daysInMonth = this.props.days[this.props.month];
     let printDays = [];
+    let storedDays = [];
+    let holiday = [];
+    let birthday = [];
+    let storedHolidays = [];
 
     while (daysInMonth != 0) {
       printDays.push(q);
@@ -20,19 +27,47 @@ class Board extends React.Component {
       daysInMonth -= 1;
     }
 
+    console.log(holiday);
+    for (let x = 1; x < holidays.length; x++) {
+      if (holidays[x].length > 1) {
+        // for (let p = 1; p < holidays[x].length; p++) {
+        holiday.push(holidays[x][1].name);
+        // }
+      } else {
+        holiday.push("");
+      }
+    }
+
+    for (let x = 1; x < birthdays.length; x++) {
+      if (birthdays[x].length > 1) {
+        // for (let p = 1; p < holidays[x].length; p++) {
+        birthday.push(birthdays[x][1].name);
+        // }
+      } else {
+        birthday.push("");
+      }
+    }
+    console.log(birthday);
     for (let count = 0; count < monthdaySkiper; count++) {
-      rows.push(<Square value={"."} key={count + 100} />);
+      rows.push(<Square value={"."} key={count + 400} />);
     }
 
     for (var i = 0; i < 42 - monthdaySkiper; i++) {
       if (printDays[i] > daysInMonth) {
-        rows.push(<Square value={printDays[i]} key={i} />);
+        rows.push(
+          <Square
+            value={printDays[i]}
+            info={holiday[i]}
+            bDay={birthday[i]}
+            key={i}
+          />
+        );
       } else {
         rows.push(<Square value={"."} key={i} />);
       }
     }
 
-    return <div>{rows}</div>;
+    return <div className="rows">{rows}</div>;
   };
   render() {
     return (
