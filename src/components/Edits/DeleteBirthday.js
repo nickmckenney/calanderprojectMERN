@@ -37,18 +37,21 @@ class Delete extends Component {
   render() {
     return (
       <div>
-        <form className="form-inline">
+        <form className="form-inline my-2 my-lg-0">
           <div className="form-group">
             {/* <input
               type="text"
-              placeholder="ID (Required to delete)"
+              placeholder="Delete by ID"
               onChange={this.setID}
+              className="form-control mr-sm-2"
+              style={{ width: "60%" }}
+            />
               className="form-control"
               style={{ width: "55%" }}
             /> */}
             <div className="space-five"></div>
             <button
-              className="btn btn-danger"
+              className="btn btn-outline-danger my-2 my-sm-0"
               type="submit"
               onClick={this.delete}
             >
