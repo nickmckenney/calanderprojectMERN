@@ -132,6 +132,10 @@ class App extends Component {
       });
   };
 
+  sum(a, b) {
+    return a + b;
+  }
+
   // Fetches birthdays for current month (WDC)
   grabBirthdayMonth = (currentMonth = this.state.month) => {
     this.setState({ isLoading: true });

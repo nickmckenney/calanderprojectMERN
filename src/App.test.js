@@ -14,6 +14,9 @@ describe("App component", () => {
   beforeEach(() => {
     component = shallow(<App />);
   });
+  it("should render my component", () => {
+    const wrapper = shallow(<App />);
+  });
   it("should have a state attribute called month initialized to 1", () => {
     expect(component.state("month")).toEqual(1);
   });
