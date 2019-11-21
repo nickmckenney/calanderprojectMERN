@@ -20,7 +20,7 @@ class HolidaySearchByName extends Component {
         this.searchArray = res;
         this.isLoading = false;
         // This passes the search results back up via function passed down as props (WDC)
-        // This function will need to be wherever state is updating.
+        // This function will need to be wherever displayed data is updating.
         this.props.setSearchArray(res);
       })
       .catch(err => {
