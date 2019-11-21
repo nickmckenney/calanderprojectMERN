@@ -13,7 +13,7 @@ class Delete extends Component {
   delete = event => {
     event.preventDefault();
     this.isLoading = true;
-    fetch(this.props.apiURL + "/id/" + this.editID, {
+    fetch(this.props.apiURL + "birthday/id/" + this.editID, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" }
     })
@@ -38,7 +38,7 @@ class Delete extends Component {
     return (
       <div>
         <form className="form-inline">
-          <div className="form-group amiibo-delete containerInput">
+          <div className="form-group">
             <input
               type="text"
               placeholder="ID (Required to delete)"
