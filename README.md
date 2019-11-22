@@ -34,7 +34,7 @@ This project was based on MERN and the entire goal of this group project was to 
 
 --- Create a planning directory
 
-#### As a group we needed to use the feature branch workflow so each person in the group can be as efficient as possible in making a calendar.
+#### The planning directory inculdes a list of models we used in the calendar as well as a picture of our entire wireframe.
 ---
 **Links**
 - [Deployed App](https://5dd8005397f25700083890c9--calanderproject.netlify.com/)
@@ -45,7 +45,9 @@ This project was based on MERN and the entire goal of this group project was to 
 
 -- Communication
 
-##### Creating a fullstack MERN project from scartch is difficult as a team when without a plan. As a group we needed to decide 
+##### Creating a fullstack MERN project from scartch is difficult as a team when without a plan As a group we needed to use the feature branch workflow so each person in the group can be as efficient as possible in making a calendar. We used an efficient workflow to split up the process and make time use very efficient.
 
 
 -- Learning how to git pull effectively
+
+#### Pulling fellow teammates code in the same file took a lot of learning as well as
