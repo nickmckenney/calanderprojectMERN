@@ -5,6 +5,7 @@ import Aside from "./Aside";
 import Container from "./Container";
 import { configure } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
+import Square from "./Day";
 configure({ adapter: new Adapter() });
 
 class App extends Component {
@@ -239,10 +240,9 @@ class App extends Component {
           clickHandlerPrev={this.monthPrevoius}
           months={this.months}
           apiURL={this.apiURL}
+          {...this.state}
         />
-        <Aside
-          apiURL={this.apiURL}
-        />
+        <Aside apiURL={this.apiURL} />
         <Container
           {...this.state}
           dayCounter={this.dayCounter}
