@@ -11,4 +11,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [Github Repository](https://github.com/nickmckenney/calanderprojectMERN)
 - [API URL](https://calendar-api-deploy.herokuapp.com/)
 
-	![Example App](preview.png)
+	![Example App](./src/images/preview.png)
