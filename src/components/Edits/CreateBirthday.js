@@ -81,33 +81,17 @@ class BirthdayUpdateAdd extends Component {
   render() {
     return (
       <div>
-        <div className="amiibo-search-ID">
+        <div className="amiibo-search-ID editAddContainer">
           Edit/Add By ID
-          <form className="form-inline editAdd">
+          <form className="form-inline formContainer">
             <div className="form-group">
               <input
                 type="text"
-                placeholder="ID (Required to edit/Leave empty to add)"
+                placeholder="ID For Edit"
                 onChange={this.setID}
                 className="form-control"
-                style={{ width: "400px" }}
+                style={{ width: "15vw" }}
               />
-              <div className="space-five"></div>
-              <button
-                className="btn btn-primary"
-                type="submit"
-                onClick={this.editByID}
-              >
-                Edit
-              </button>
-              <div className="space-five"></div>
-              <button
-                className="btn btn-primary"
-                type="submit"
-                onClick={this.AddNew}
-              >
-                Add
-              </button>
             </div>
 
             <div className="form-group">
@@ -116,19 +100,37 @@ class BirthdayUpdateAdd extends Component {
                 placeholder="Name"
                 onChange={this.setUpdateName}
                 className="form-control"
-                style={{ width: "400px" }}
+                style={{ width: "15vw" }}
               />
             </div>
 
             <div className="form-group">
               <input
                 type="text"
-                placeholder="Date (format: YYYY-MM-DD)"
+                placeholder="Date [YYYY-MM-DD]"
                 onChange={this.setUpdateDate}
                 className="form-control"
-                style={{ width: "400px" }}
+                style={{ width: "15vw" }}
               />
             </div>
+              <div className="editAdd">
+                <div className="space-five"></div>
+                <button
+                  className="add"
+                  type="submit"
+                  onClick={this.AddNew}
+                >
+                  Add
+                </button>
+                <div className="space-five"></div>
+                <button
+                  className="edit"
+                  type="submit"
+                  onClick={this.editByID}
+                >
+                  Edit
+                </button>
+              </div>
           </form>
         </div>
       </div>

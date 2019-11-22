@@ -17,8 +17,6 @@ class Aside extends Component {
     console.log(this.props);
     return (
       <div className="aside">
-        <Square apiURL={this.props.apiURL} displayUpdate={this.displayUpdate} />
-        {/* <Delete apiURL={this.props.apiURL} displayUpdate={this.displayUpdate} /> */}
         <Create apiURL={this.props.apiURL} displayUpdate={this.displayUpdate} />
       </div>
     );

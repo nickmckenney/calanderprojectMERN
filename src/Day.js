@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import Delete from "./components/Edits/DeleteBirthday";
+import { ReactComponent as Delete } from "./images/Delete.svg";
 
 class Square extends React.Component {
   constructor(props) {
@@ -33,21 +33,30 @@ class Square extends React.Component {
 
   render() {
     console.log(this.props.apiURL);
-    if (this.props.value !== ".") {
+    if (this.props.value !== "." && this.props.bDay) {
       return (
         <div className={"square"}>
           {this.props.value}
           <div className="holidayContainer">
             <h4 className="info">{this.props.info}</h4>
-            <button
-              className="btn btn-outline-danger my-2 my-sm-0"
-              type="submit"
-              onClick={this.clickDay}
-            >
-              Delete
-            </button>
-            <br></br>
-            <h4 className="holiday">{this.props.bDay}</h4>
+            <div className="birthdayContainer">
+              <div className="bDayContainer">
+                <h4 className="holiday">{this.props.bDay + "'s Birthday"}</h4>
+              </div>
+              <Delete
+                className="svgIcon"
+                onClick={this.clickDay}
+              />
+            </div>
+          </div>
+        </div>
+      );
+    } else if (this.props.value !== ".") {
+      return (
+        <div className={"square"}>
+          {this.props.value}
+          <div className="holidayContainer">
+            <h4 className="info">{this.props.info}</h4>
           </div>
         </div>
       );
