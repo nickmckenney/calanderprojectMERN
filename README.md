@@ -66,7 +66,7 @@ By hovering over a day that includes a birthday you can click the small (x) that
 ##### Creating a fullstack MERN project from scartch is difficult as a team when without a plan As a group we needed to use the feature branch workflow so each person in the group can be as efficient as possible in making a calendar. We used an efficient workflow to split up the process and make time use very efficient.
 
 
--- Learning how to git pull effectively
+- Learning how to git pull effectively
 
 #### Pulling fellow teammates code in the same file took a lot of learning as well as
 
