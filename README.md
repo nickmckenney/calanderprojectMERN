@@ -40,3 +40,12 @@ This project was based on MERN and the entire goal of this group project was to 
 - [Deployed App](https://5dd8005397f25700083890c9--calanderproject.netlify.com/)
 - [Github Repository](https://github.com/nickmckenney/calanderprojectMERN)
 - [API URL](https://calendar-api-deploy.herokuapp.com/)
+
+**Working as a Group**
+
+-- Communication
+
+##### Creating a fullstack MERN project from scartch is difficult as a team when without a plan. As a group we needed to decide 
+
+
+-- Learning how to git pull effectively
