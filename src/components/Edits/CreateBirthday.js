@@ -82,7 +82,7 @@ class BirthdayUpdateAdd extends Component {
     return (
       <div>
         <div className="amiibo-search-ID editAddContainer">
-          Edit/Add By ID
+          New Birthday
           <form className="form-inline formContainer">
             <div className="form-group">
               <input
