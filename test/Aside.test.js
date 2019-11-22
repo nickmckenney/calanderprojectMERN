@@ -3,7 +3,7 @@ let wrapper;
 beforeEach(() => {
   wrapper = shallow(<Aside />);
 });
-describe("<Add /> rendering", () => {
+describe("<Aside /> rendering", () => {
   it("should render one <div>", () => {
     expect(wrapper.find("div")).toHaveLength(1);
   });

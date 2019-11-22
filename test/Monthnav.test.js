@@ -1,12 +1,12 @@
 // Need to figure out mocking props to pass
-import Container from "../src/Container";
+import Monthnav from "../src/components/Monthnav/Monthnav";
 let wrapper;
 beforeEach(() => {
-  wrapper = shallow(<Container />);
-  wrapper.setProps({ days: "30", months: "1" });
+  wrapper = shallow(<Monthnav />);
 });
-describe("<Container /> rendering", () => {
+describe("<Monthnav /> rendering", () => {
   it("should render one <div>", () => {
     expect(wrapper.find("div")).toHaveLength(1);
   });
+  
 });

@@ -3,7 +3,7 @@ let wrapper;
 beforeEach(() => {
   wrapper = shallow(<Day />);
 });
-describe("<Add /> rendering", () => {
+describe("<Day /> rendering", () => {
   it("should render one <h4>", () => {
     expect(wrapper.find("h4")).toHaveLength(1);
   });
@@ -13,5 +13,4 @@ describe("<Add /> rendering", () => {
   it("should have a class holidayContainer", () => {
     expect(wrapper.find(".holidayContainer")).toHaveLength(1);
   });
-  
 });
