@@ -13,7 +13,7 @@ class BirthdayUpdateAdd extends Component {
   editByID = event => {
     event.preventDefault();
     this.isLoading = true;
-    fetch(this.props.apiURL + "/id/" + this.editID, {
+    fetch(this.props.apiURL + "birthday/id/" + this.editID, {
       method: "PUT",
       body: JSON.stringify(this.data),
       headers: { "Content-Type": "application/json" }
@@ -30,11 +30,15 @@ class BirthdayUpdateAdd extends Component {
         console.log("We've got a problem, sir.", err);
       });
   };
+  // Switching to post
+  // Switching to post
+  // Switching to post
 
   AddNew = event => {
     event.preventDefault();
     this.isLoading = true;
-    fetch(this.props.apiURL, {
+    console.log(this.props.apiURL + "birthday/");
+    fetch((this.props.apiURL + "birthday/"), {
       method: "POST",
       body: JSON.stringify(this.data),
       headers: { "Content-Type": "application/json" }
@@ -45,7 +49,7 @@ class BirthdayUpdateAdd extends Component {
         this.searchArray = res;
         this.isLoading = false;
         // Sends res back to display from a props function
-        this.props.setSearchArray(res);
+        // this.props.setSearchArray(res);
       })
       .catch(err => {
         console.log("We've got a problem, sir.", err);
@@ -77,56 +81,61 @@ class BirthdayUpdateAdd extends Component {
   render() {
     return (
       <div>
-        <div className="amiibo-search-ID">
-          Edit/Add By ID
-          <form className="form-inline">
+        <div className="amiibo-search-ID editAddContainer">
+          New Birthday
+          <form className="form-inline formContainer">
             <div className="form-group">
               <input
                 type="text"
-                placeholder="ID (Required to edit/Leave empty to add)"
+                placeholder="ID For Edit"
                 onChange={this.setID}
                 className="form-control"
-                style={{ width: "400px" }}
-              />
-              <div className="space-five"></div>
-              <button
-                className="btn btn-primary"
-                type="submit"
-                onClick={this.editByID}
-              >
-                Edit
-              </button>
-              <div className="space-five"></div>
-              <button
-                className="btn btn-primary"
-                type="submit"
-                onClick={this.AddNew}
-              >
-                Add
-              </button>
-            </div>
-            <div className="form-group">
-              <input
-                type="text"
-                placeholder="Name"
-                onChange={this.setUpdateName}
-                className="form-control"
-                style={{ width: "400px" }}
+                style={{ width: "15vw" }}
               />
             </div>
 
             <div className="form-group">
               <input
                 type="text"
-                placeholder="Date (format: YYYY-MM-DD)"
-                onChange={this.setUpdateDate}
+                placeholder="Name"
+                onChange={this.setUpdateName}
                 className="form-control"
-                style={{ width: "400px" }}
+                style={{ width: "15vw" }}
               />
             </div>
+
+            <div className="form-group">
+              <input
+                type="text"
+                placeholder="Date [YYYY-MM-DD]"
+                onChange={this.setUpdateDate}
+                className="form-control"
+                style={{ width: "15vw" }}
+              />
+            </div>
+              <div className="editAdd">
+                <div className="space-five"></div>
+                <button
+                  className="add"
+                  type="submit"
+                  onClick={this.AddNew}
+                >
+                  Add
+                </button>
+                <div className="space-five"></div>
+                <button
+                  className="edit"
+                  type="submit"
+                  onClick={this.editByID}
+                >
+                  Edit
+                </button>
+              </div>
           </form>
         </div>
       </div>
     );
   }
 }
+
+export default BirthdayUpdateAdd;

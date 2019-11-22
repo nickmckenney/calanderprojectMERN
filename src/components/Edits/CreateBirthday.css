@@ -1,0 +1,58 @@
+.editAddContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.editAdd {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+}
+
+.add, .edit {
+    margin: 0 1px;
+}
+
+.add, .edit {
+    width: 3.5vw;
+    color: #33A0FF;
+    font-size: 1vw;
+    background: rgba(255, 255, 255, 0);
+    margin: 0 1px;
+    border: 1px solid #33A0FF;
+    padding: 3px 0;
+    transition: 0.3s ease;
+}
+
+.add:hover, .edit:hover {
+    background: #33A0FF;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.add:active, .edit:active {
+    outline-style: none;
+    filter: brightness(90%);
+    transition: 0.3s ease;
+}
+
+.add {
+    border-top-left-radius: 0.8vw;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0.8vw;
+}
+
+.edit {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0.8vw;
+    border-bottom-right-radius: 0.8vw;
+    border-bottom-left-radius: 0;
+}

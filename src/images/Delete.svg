@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X8 -->
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    xml:space="preserve"
+    width="17px"
+    height="17px"
+    version="1.1"
+    shape-rendering="geometricPrecision"
+    text-rendering="geometricPrecision"
+    image-rendering="optimizeQuality"
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    viewBox="0 0 20 20"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <path
+        fill="black"
+        d="M3 3c4,-4 10,-4 14,0 4,4 4,10 0,14 -4,4 -10,4 -14,0 -4,-4 -4,-10 0,-14zm1 0l6 6 6 -6c-3,-3 -9,-3 -12,0zm13 1l-6 6 6 6c3,-3 3,-9 0,-12zm-1 13l-6 -6 -6 6c3,3 9,3 12,0zm-13 -1l6 -6 -6 -6c-3,3 -3,9 0,12z"/>
+</svg>
