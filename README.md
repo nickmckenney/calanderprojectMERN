@@ -69,7 +69,7 @@ Creating a fullstack MERN project from scartch is difficult as a team when witho
 
 - Learning how to git pull effectively
 
-Pulling fellow teammates code in the same file took a lot of learning as well as
+Pulling fellow teammates code in the same file took a lot of learning as well as communication. The biggest issue we ran into was having conflicting variables. This group project was a learning curve for understanding proper proceedures of git pull and git push as well as having seperate branches.
 
 ---
 
