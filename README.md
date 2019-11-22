@@ -18,7 +18,13 @@ This project was based on MERN and the entire goal of this group project was to 
 **Features**
 - Add a birthday to the calendar by entering a name and birthdate into the input field.
 
-- Delete a birthday by hovering over a day that includes a birthday and clicking the small (x) that appears.
+**Delete A Birthday**
+
+![Example App](./src/images/deletePreview.png)
+
+By hovering over a day that includes a birthday you can click the small (x) that appears to delete the birthday in the block.
+
+---
 
 - Edit a Birthday by using the input fields to the right
 ---
