@@ -10,6 +10,6 @@ This project was based on MERN and the entire goal of this group project was to 
 
 **Links**
 
--[Deployed App](https://5dd8005397f25700083890c9--calanderproject.netlify.com/)
--[Github Repository](https://github.com/nickmckenney/calanderprojectMERN)
--[API URL](https://calendar-api-deploy.herokuapp.com/)
+- [Deployed App](https://5dd8005397f25700083890c9--calanderproject.netlify.com/)
+- [Github Repository](https://github.com/nickmckenney/calanderprojectMERN)
+- [API URL](https://calendar-api-deploy.herokuapp.com/)
