@@ -19,11 +19,22 @@ This project was based on MERN and the entire goal of this group project was to 
 - Add a birthday to the calendar by entering a name and birthdate into the input field.
 
 - Delete a birthday by hovering over a day that includes a birthday and clicking the small (x) that appears.
+
+- Edit a Birthday by using the input fields to the right
 ---
 
 **Getting Started**
 
+-- Find a project 
 
+#### Looking for a project can be very daunting since. We decided on making a calendar because the layout and design of it is not complicated and we can focus on our API and crud functionality
+-- Create a wireframe
+
+#### Creating a wireframe for this project is estential since there are so many componenets in a calendar. We created a wireframe using adobe XD. By doing this we learned how to create the perfect Grid template for this project. 
+
+--- Create a planning directory
+
+#### As a group we needed to use the feature branch workflow so each person in the group can be as efficient as possible in making a calendar.
 ---
 **Links**
 - [Deployed App](https://5dd8005397f25700083890c9--calanderproject.netlify.com/)
