@@ -16,7 +16,12 @@ This project was based on MERN and the entire goal of this group project was to 
 ---
 
 **Features**
-- Add a birthday to the calendar by entering a name and birthdate into the input field.
+
+**Add A Birthday**
+
+![Example App](./src/images/addPreview.png)
+
+By entering a name and birthdate into the form on the left, you can add your own birthday to the calendar!
 
 **Delete A Birthday**
 
