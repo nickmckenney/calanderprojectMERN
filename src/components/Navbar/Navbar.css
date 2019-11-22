@@ -37,6 +37,7 @@ button:focus {
     justify-content: space-between;
     justify-content: center;
     align-self: center;
+    font-weight: bold;
 }
 
 .arrow {

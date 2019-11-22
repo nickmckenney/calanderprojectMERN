@@ -4,10 +4,21 @@
     align-items: center;
 }
 
+.newBirthday {
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
 .formContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+input.form-control {
+    margin-top: 10px;
 }
 
 .editAdd {
@@ -21,7 +32,7 @@
 }
 
 .add, .edit {
-    width: 3.5vw;
+    width: 4vw;
     color: #33A0FF;
     font-size: 1vw;
     background: rgba(255, 255, 255, 0);
