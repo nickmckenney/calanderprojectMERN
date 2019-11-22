@@ -21,7 +21,21 @@ This project was based on MERN and the entire goal of this group project was to 
 
 ![Example App](./src/images/addPreview.png)
 
-By entering a name and birthdate into the form on the left, you can add your own birthday to the calendar!
+By entering a name and birthdate into the form on the left (no need to enter the ID when adding a new birthday), you can add your own birthday to the calendar!
+
+![Example App](./src/images/addedBirthday.png)
+
+---
+
+**Edit A Birthday**
+
+![Example App](./src/images/editPreview.png)
+
+By entering the ID of the birthday you want to edit in the ID field of the form, you can change either the name or the date of that birthday.
+
+![Example App](./src/images/editedBirthday.png)
+
+---
 
 **Delete A Birthday**
 
@@ -29,9 +43,6 @@ By entering a name and birthdate into the form on the left, you can add your own
 
 By hovering over a day that includes a birthday you can click the small (x) that appears to delete the birthday in the block.
 
----
-
-- Edit a Birthday by using the input fields to the right
 ---
 
 **Getting Started**
