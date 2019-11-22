@@ -5,7 +5,6 @@ import Aside from "./Aside";
 import Container from "./Container";
 import { configure } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import Square from "./Day";
 configure({ adapter: new Adapter() });
 
 class App extends Component {
@@ -209,7 +208,6 @@ class App extends Component {
     if (this.state.month === 1) {
       this.setState({
         year: this.state.year - 1,
-        month: 12,
         month: 12,
         dayOfTheWeek: this.firstDay(12, this.state.year - 1)
       });

@@ -1,14 +1,9 @@
 import React, { Component } from "react";
 import "./Navbar.css";
-// import "bootstrap/dist/css/bootstrap.css";
-import Monthnav from "../Monthnav/Monthnav";
-import Accordion from "../Accordion/Accordion";
 import "../../App.css";
 
 class Navbar extends Component {
-  constructor(props) {
-    super(props);
-  }
+  
   linkHandler(e) {
     e.preventDefault();
   }
