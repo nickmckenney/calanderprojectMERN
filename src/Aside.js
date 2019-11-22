@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-// import Delete from "./components/Edits/DeleteBirthday";
-import Create from "./components/Edits/CreateBirthday";
-import Square from "./Day";
+import Create from "./components/CreateEditBirthday/CreateEditBirthday";
 
 class Aside extends Component {
   constructor(props) {

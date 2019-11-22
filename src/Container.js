@@ -1,10 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
 import Square from "./Day";
 class Board extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+  
   renderSquare = () => {
     var rows = [];
     let q = 1;
@@ -16,12 +14,10 @@ class Board extends React.Component {
     console.log(holidays);
     let daysInMonth = this.props.days[this.props.month];
     let printDays = [];
-    let storedDays = [];
     let holiday = [];
     let birthday = [];
-    let storedHolidays = [];
 
-    while (daysInMonth != 0) {
+    while (daysInMonth !== 0) {
       printDays.push(q);
       q += 1;
       daysInMonth -= 1;

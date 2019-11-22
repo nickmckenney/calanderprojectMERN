@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./CreateBirthday.css";
+import "./CreateEditBirthday.css";
 
 class BirthdayUpdateAdd extends Component {
   constructor(props) {

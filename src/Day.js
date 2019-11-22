@@ -1,12 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
 import { ReactComponent as Delete } from "./images/Delete.svg";
 
 class Square extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
+  
   clickDay = event => {
     console.log(this.props.apiURL);
     event.preventDefault();
