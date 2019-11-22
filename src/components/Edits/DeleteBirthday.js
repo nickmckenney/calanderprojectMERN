@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import "./DeleteBirthday.css";
 
+import { configure } from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
+configure({ adapter: new Adapter() });
+
+
 class Delete extends Component {
   constructor(props) {
     super(props);
