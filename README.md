@@ -15,8 +15,9 @@ This project was based on MERN and the entire goal of this group project was to 
 - Jest (Testing)
 ---
 
-**List of Features**
+**Features**
 - Add a birthday to the calendar by entering a name and birthdate into the input field.
+
 - Delete a birthday by hovering over a day that includes a birthday and clicking the small (x) that appears.
 ---
 
