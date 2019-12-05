@@ -8,6 +8,7 @@ This project was based on MERN and the entire goal of this group project was to 
 
 **Technologies Used**
 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Backend [Heroku](https://calendar-api-deploy.herokuapp.com/).
 - Heroku (API Deployment)
 - Netlify (APP Deployment)
 - Storybook (Component Library)
